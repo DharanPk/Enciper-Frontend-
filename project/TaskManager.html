@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <style>
+         .main{
+            background-color:lightcyan;
+            width: 50%;
+            height: 380px;
+            margin: 300px auto;
+            text-align: center;
+         }
+         .sub-a{
+            text-align: center;
+         }
+         .a{
+            display: flex;
+            justify-content: space-around;
+         }
+         .b{
+            display: flex;
+            justify-content: space-around;
+            
+         }
+         .c{
+            display: flex;
+            justify-content: space-around;
+         }
+         .but{
+            background-color: rgb(218, 43, 43);
+            color: white;
+            border-radius: 5px;
+            width: 70px;
+            height: 30px;
+            cursor: pointer;
+
+
+         }
+         .p1{
+            text-decoration:line-through;
+            color:darkgray;
+         }
+         .but1{
+            background-color:rgb(15, 154, 241);
+            color: aliceblue;
+            border:0px;
+            border-radius: 5px;
+            width: 70px;
+            height: 30px;
+            cursor: pointer;
+
+         }
+         input [type="text"]{
+            width: 20px;
+         }
+         hr{
+            border-style: dashed;
+            width: 90%;
+         }
+         h2{
+            color: rgb(15, 154, 241);
+            font-size: 38px;
+            padding: 10px;
+            margin-bottom: 5px;
+         }
+         .box{
+            background-color: azure;
+            width: 40px;
+            height: 20px;
+         }
+         i{
+            margin-bottom: 0px;
+         }
+         .box{
+            background-color:white;
+         }
+         
+        </style>
+</head>
+<body>
+    <div class="main">
+        <h2>Task Manager</h2>
+        <div class="sub-a">
+        
+        <input type="text" placeholder="What needs to be done?" id="in">
+        <button class="but1">Add Task</button>
+    </div>
+<div class="task">
+    <div class="a">
+        <i class="fa-solid fa-check"></i>
+        <p class="p1">Task A</p>
+         <button class="but">Remove </button>  
+         </div>
+         <hr>
+         <div class="b">
+        <i class="fa-solid fa-check"></i>
+        <p class="pc"><b>Task B</b></p>
+         <button class="but">Remove </button>  
+         </div>
+         <hr>
+         <div class="c">
+        <button class="box"><i class="fa-solid fa-check"></i></button>
+        <p class="p1">Task C</p>
+         <button class="but">Remove</button>  
+         </div>
+         <hr>
+         </div>
+    </div>
+</body>
+</html>
