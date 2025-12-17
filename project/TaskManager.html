@@ -17,20 +17,26 @@
             text-align: center;
          }
          .sub-a{
-            text-align: center;
+            display: flex;
+            justify-content: space-evenly;
          }
          .a{
             display: flex;
             justify-content: space-around;
+            align-items: center;
+
          }
          .b{
             display: flex;
             justify-content: space-around;
+            align-items: center;
             
          }
          .c{
             display: flex;
             justify-content: space-around;
+            align-items:center;
+            
          }
          .but{
             background-color: rgb(218, 43, 43);
@@ -53,11 +59,9 @@
             border-radius: 5px;
             width: 70px;
             height: 30px;
+            margin-right: 35px;
             cursor: pointer;
 
-         }
-         input [type="text"]{
-            width: 20px;
          }
          hr{
             border-style: dashed;
@@ -81,12 +85,21 @@
             background-color:white;
          }
          input{
-            width: 40%;
-            height: 30px;
-            margin-right: 40px;
-
+            width: 50%;  
+            height: 30px; 
+            font-size: 18px; 
+            margin: 0px ;
+            padding: 0px;
+            border-radius:5px;
          }
-         
+         .task{
+            padding: 20px;
+         }
+         u{
+          border: 2px solid rgb(16, 171, 209); 
+          width: 20px;
+          height: 20px; 
+         }
         </style>
 </head>
 <body>
@@ -111,7 +124,7 @@
          </div>
          <hr>
          <div class="c">
-        <button class="box"><i class="fa-solid fa-check"></i></button>
+       <u><i class="fa-solid fa-check"></i></u>
         <p class="p1">Task C</p>
          <button class="but">Remove</button>  
          </div>
