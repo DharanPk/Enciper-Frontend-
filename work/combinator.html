@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 p{
+            background-color: aqua;
+            color: black;
+            width: 300px;
+        }
+        .div2 > p{
+            background-color: black;
+            color: aliceblue;
+            width: 300px;
+        }
+        .div3 + p{
+            background-color: rgb(244, 10, 10);
+            color: aliceblue;
+            width: 300px;
+        }
+        .div4 ~ p{
+            background-color: rgb(182, 244, 10);
+            color: rgb(15, 15, 16);
+            width: 300px;
+        }
+
+        h4{
+            background-color: rgb(36, 210, 9);
+            color: beige;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Descendant Combinator  " "</h2>
+    <div class="div1">
+        <p>Paragraph 1 in div1.</p>
+        <p>Paragraph 2 in div1.</p>
+        <footer>
+            <p>Paragraph 3 in the div1.</p>
+        </footer>
+    </div>
+    <p>After Paragraph 4 of the div1.</p>
+    <h4>it shows the inside of all p tags</h4>
+
+    <hr>
+    <h2>Child Combinator "">"</h2>
+    <div class="div2">
+        <p>Paragraph 1 in div2.</p>
+        <p>Paragraph 2 in div2.</p>
+        <footer>
+            <p>Paragraph 3 in the div2.</p>
+        </footer>
+        </div>
+    <h4>it will shows only the inside of child p tags</h4>
+        </div>
+
+     <hr>
+    <h2> Next Sibling "+"</h2>
+    <div class="div3">
+        <p>Paragraph 1 in div3.</p>
+        <p>Paragraph 2 in div3.</p>
+        <footer>
+            <p>Paragraph 3 in the div3.</p>
+        </footer>
+        </div>
+        <p>After Paragraph 4 of the div3.</p>
+        <p>After Paragraph 5 of the div4.</p>
+        <h4>only show the nxt of div after continous p only</h4>
+        </div> 
+        
+        
+        <hr>
+        <h2>Subsequent-sibling "~"</h2>
+    <div class="div4">
+        <p>Paragraph 1 in div4.</p>
+        <p>Paragraph 2 in div4.</p>
+        <footer>
+            <p>Paragraph 3 in the div4.</p>
+        </footer>
+        </div>
+        <p>After Paragraph 4 of the div4.</p>
+        <p>After Paragraph 5 of the div4.</p>
+        <h4>it will show the nxt to the div containg p tags</h4>
+        </div>
+
+
+        <hr>
+        
+        
+        
+
+    
+</body>
+</html>
