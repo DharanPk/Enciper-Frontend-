@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            cursor: pointer;
+        }
+            a:link {
+            color: red;
+            }
+            a:visited {
+            color: green;
+            }
+            a:hover {
+            color: rgb(245, 213, 5);
+            }
+            a:active {  
+            color: blue;
+            }
+            
+            .div1 .p1,h1{
+                color: black;
+                cursor: pointer;
+                text-align: center;
+            }
+             .div1 h1:hover{
+                font-size: 50px;
+                background-color: rgb(32, 156, 187);
+                color: white;
+                cursor: pointer;
+                text-align: center;
+            }
+            .div2 p{
+                background-color: burlywood;
+                color: black;
+                display: inline-block;
+                width: 200px;
+                height: 50px;
+                text-align: center;
+                align-content: center;
+                font-size: 30px;
+                cursor: pointer;
+            }
+            .div2 p:hover{
+                background-color: darkgoldenrod;
+                cursor:no-drop;
+            }
+            h1{
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            input{
+                width: 300px;
+                height: 35px; 
+                border-color: aqua;
+                border-width: 5px;
+                padding: 5px;
+                margin-left: 50px;
+            }
+            input:focus{
+                background-color: aquamarine;
+                color: black;
+                cursor: text;
+            }
+            /* .last{
+                display: flex;
+                justify-content: space-evenly;
+            } */
+            img{
+                display:none;
+                width: 500px;
+                height: 300px;
+            }
+           .last:hover .img1{
+                display: block;
+            }
+            .end:hover .img2{
+                display: block;
+            }
+            h2{
+                display: block;
+            }
+            </style>
+</head>
+<body>
+    <div class="div1">
+        <h1>Pseudo Class</h1>
+        <p class="p1"><b>Click</b></p>
+        <h3>Flipkart WebSite</h1>
+        <p><a href="https://www.flipkart.com/">Flipkart</a></p>
+    </div>
+    <div class="div2">
+        <h1>Button And Labels </h1>
+        <p>Mouse Pointer</p>
+        <input type="text" name="" id="" placeholder="Click Me">
+        
+    </div>
+<div class ="tooltip">
+    <h1>Image Hover</h1>
+    <div class="last">
+
+    <h2>Royal Challengers</h2>
+    <img  class="img1" src="https://wallpaperaccess.com/full/2009463.jpg">
+    <div>
+    <div class="end">
+    <h2> Chennai super kings</h2>
+    <img  class="img2" src="https://wallpaperaccess.com/full/1898247.jpg">
+    </div>
+</div>
+    
+    
+</body>
+</html>
