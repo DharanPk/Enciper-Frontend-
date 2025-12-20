@@ -1,0 +1,188 @@
+   body{
+            margin: 0px;
+        }
+       .child1   nav {
+        display: flex;
+        justify-content: space-between;
+        background: rgb(47, 46, 46);
+        height: 60px;
+        margin: 0px;
+        cursor: pointer;
+       }
+        .child1 button{
+        background-color: rgb(47, 46, 46);
+        border:01px solid rgb(102, 102, 102);
+        font-size: 20px;
+       }
+       .nav2 button{
+        font-size: 24px;
+        width: 60px;
+       }
+       .nav1 .b6{
+        width: 160px;
+        font-size: 30px;
+        font-family: sans-serif;
+        color: rgb(235, 232, 232);
+        border:black;
+       }
+       .nav1 .b7{
+        width: 140px;
+        font-size: 15px;
+        font-family: sans-serif;
+        color: rgb(163, 159, 159);
+        background-color:rgb(38, 37, 37);
+        border:rgb(38, 37, 37); ;
+       }
+       .b1,.b2,.b3,.b4,.b5{
+        color: rgb(160, 157, 157);
+       }
+       
+       .nav2 .b4{
+        background-color:rgb(140, 194, 70);
+        border:rgb(128, 184, 55) ;
+        
+       }
+       .b4{
+        color: white;
+       }
+      
+       .b1:hover {
+        background-color: rgb(32, 31, 31);
+        color: white;
+       }
+       .b2:hover {
+        background-color: rgb(32, 31, 31);
+        color: white;
+       }
+       .b3:hover {
+        background-color: rgb(31, 31, 31);
+        color: white;
+       }
+       .b4:hover {
+        background-color: rgb(32, 32, 32);
+        color: white;
+       }
+       .b5:hover {
+        background-color: rgb(32, 32, 32);
+        color: white;
+       }
+       
+        .nav1{
+            display: flex;
+        }
+        .nav2{
+            display: flex;
+       
+        }
+        .nav2 a{
+          text-decoration: none;
+          font-size: 33px;
+          color: black;
+          margin-right: 200px;
+        }
+        .child2{
+          display: flex;
+        }
+        .menu{
+          display: flex;
+          gap:30px  ;
+          list-style: none;
+          align-items: center;
+        }
+        .menu li{
+           position:relative;
+           list-style: none;
+        }
+      .menu a {
+        text-decoration: none;
+        color: #333;
+        padding: 8px 12px;
+        display: block;
+      }
+      .child2{
+        background-color:white;
+        color:black;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-evenly;
+        /* text-decoration: none; */
+
+      }
+        .down1 {
+          position:absolute;
+          width: 180px;
+          background: #fff;
+          border: 1px solid #ccc;
+          display: none;
+        }
+        .down1 li{
+          border-top: 1px solid rgb(34, 109, 111);
+          /* padding: 5px; */
+          right: 40px;
+          
+        }
+       
+        .down2{
+          position: relative;
+        }
+        .down:hover .down1{
+          cursor: pointer;
+          display: block;
+        }
+        .down3{
+          position: absolute;
+          top: 0;
+          left: 200px;
+          width: 180px;
+          background: #fff;
+          border: 1px solid #ccc;
+          display: none;
+        }
+        .down2:hover .down3{
+          display: block;
+        }
+        .nav3{
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        /* .child3 img{
+            margin-left: 80px;
+        } */
+        .child3 {
+            display: flex;
+            margin:0px 15px
+        } 
+        .block{
+            padding-top:  85px;
+        }
+        .block h1 {
+         font-size: 50px;
+         margin:0px 0px 0px 190px;
+         font-family:Arial, Helvetica, sans-serif;
+         padding-bottom: 10px;
+         }
+        .block p{
+         font-size: 15px;
+         margin-left: 190px;
+         font-family: Arial;
+         color: #7f7f7f;
+
+        }
+        .image{
+            width: 784px;
+            margin: 0px 0px 0px 0px; 
+        }
+        .block button{
+          width: 140px;
+          height: 45px;
+          margin:40px 0px 0px 190px;
+          padding: 5px;
+          font-size: 15px;
+          border:1px royalblue;
+          border-radius: 25px ;
+          color: white;
+          background-color: rgb(67, 168, 239);
+        }
+         .but:hover{
+           box-shadow: 2px 2px 30px rgb(196, 203, 208);
+       }
+        
