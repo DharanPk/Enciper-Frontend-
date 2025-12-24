@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 50px;
+    background:transparent;
+    color: rgb(18, 18, 18);
+    /* position: sticky; */
+    top: 0;
+    /* transform: 20px; */
+
+}
+
+
+.flow img{
+     margin-top: 5px;
+}
+
+.n-left a {
+    margin-right: 25px;
+    text-decoration: none;
+    color:white;
+    font-size: 14px;
+}
+
+.navbar:hover{
+    background-color: white;
+    color: black;
+     transition-duration: 1s;
+    transition-delay: 0.1;
+    
+}
+.navbar:hover a {
+    color: black;
+}
+.navbar:hover .n-right{
+    color: black;
+}
+.flow img{
+      width: 40px;
+    height: 40px;
+    justify-items: center;
+    align-items: center;
+}
+
+
+
+.flow{
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-top: 0px;
+   
+}
+
+.n-right {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    font-size: 14px;
+    color: white;
+}
+.child4{
+    margin-left: 0px;
+}
+
+.icon {
+    cursor: pointer;
+}
+.child1 {
+    height:100vh;
+    background-image: url("https://images.unsplash.com/photo-1515543237350-b3eea1ec8082");
+    background-size:cover;
+    /* background-position: top center; */
+    /* display: flex; */
+    align-items: center;
+    /* margin-bottom:1000px; */ 
+}
+.co1{
+    color: white;
+    max-width: 500px;
+}
+.child2{
+    margin-top: 200px;
+    margin-left: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.co1 h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+.co1 button {
+    padding: 14px 28px;
+    background:rgb(151, 148, 148);
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+.co1 a{
+   color: black ;
+}
+.co1 button:hover {
+    background: rgba(12, 193, 196, 0.4);
+    transition: transform 0.2 ease;
+    color: black;
+}
+.no1{
+    margin-top: 200px;   
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    justify-self: center;
+    text-align: center;
+    width: 580px;
+          /* display:none; */  
+}
+.no1 p{
+    color: #7f7f7f; 
+    line-height: 2;
+}
+.no1:hover{
+    /* display: block; */
+}
+.grid{
+justify-items: center;
+margin-top:100px;
+ transition-duration: 1s;
+ transition-timing-function: ease;
+    transition-delay: 0.1;
+/* align-items: center; */
+
+}
+.box1{
+display: flex;
+/* grid-template-columns: auto auto auto;
+grid-template-rows: auto auto; */
+gap:100px;
+width: 80%;
+text-align: center;
+justify-content: center;
+}
+.c1{
+    transition: transform 0.3s ease;    
+
+}
+
+.box1 .c1{
+
+border-radius: 10px;
+width: 300px;
+height: 220px;
+padding: 30px;
+text-align: center;
+justify-items: center;
+
+background-color: #f7f5f5;
+
+ /* transition-duration: 1s; */
+    /* transition-delay: 0.1; */
+}
+.c1 .para{
+background-color: rgb(67, 168, 239);
+height: 80px;
+width: 80px;
+text-align: center;
+align-content: center;
+justify-content: center; 
+border-radius:100px;
+margin-top: -80px;
+font-size:25px;
+color: white;
+}
+
+.c1 h3{
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 20px;
+font-weight: 400;
+}
+.c1 p{
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+color: rgb(119, 113, 113);
+
+}
+
+.c1:hover{
+    background-color:pink;
+    color: white;
+    transform:translateY(-20px) ;
+}
+.c1:hover p {
+color: white;
+}
+.c1:hover .para{
+background-color: white;
+color: rgb(67, 168, 239);
+}
+.t4 img{
+    width: 100%;
+    height: 200px;
+}
+.sm-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.t4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+    .c1 img{
+      width: 50px;
+      height:50px;
+      border-radius: 30px;
+    }
+    .ranking{
+        color: rgb(156, 60, 60);
+        margin-top: 10px;
+    }
+    .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col2 img{
+    max-width: 100%;
+    padding: 50px 0px;
+}
+.col2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.btn{
+    display: inline-block;
+    background-color: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #563434;
+}
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.offer{
+     background: radial-gradient(#fff,#ffd6d6);
+     margin-top: 80px;
+     padding: 30px 0px;
+}
+.col2 .offer-img{
+    padding: 50px;
+}
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+    justify-items: center;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.footer p{
+    color: #8a8a8a;
+    text-align: left;
+    margin-right: 20px;
+}
+
+
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.foot-col-1,.foot-col-2,.foot-col-3,.foot-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.foot-col-1{
+    flex-basis: 30%;
+}
+
+.foot-col-2{
+    flex: 1;
+    text-align: center;
+}
+
+.foot-col-2 img{
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.foot-col-3, .foot-col-4{
+    flex-basis: 12%;
+    text-align: left;
+    line-height: 2;
+    
+}
+
+ul{
+    list-style-type: none;
+}
+
+.app-logo{
+    margin-top: 20px;   
+}
+
+.app-logo img{
+    width: 140px;
+}
+
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.footer .copy{
+    
+    text-align: center;
+
+}
