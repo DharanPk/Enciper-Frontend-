@@ -180,15 +180,19 @@ else{
     alert("FINDED")
 }
 
-// task15
+// // task15
 var n=prompt("Enter the Number")
 const prime= n =>{
-let f=0;
+f=0
+if(n<=1) {  
+let f=1;
+}
 for(let i=2;i<n;i++){
     if(n%i==0){
-        f++;
+        f=1;
     }
 }
+
 if(f==0){
     alert(n +" Prime Number")
 }
@@ -278,8 +282,11 @@ alert(even+" = Event "+ odd+ " = odd ")
 
 // task20
 var user=confirm("Do you want to Exit?");
-    if(user){
-        alert("Exit successfully");
-    }else{
-        alert("Continue to work");
-    }
+if(user){
+    alert("Exit successfully");
+}else{
+    alert("Continue to work");
+}
+
+
+
