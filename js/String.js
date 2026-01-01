@@ -22,7 +22,7 @@
 // let p2 = word.slice(-11);//
 
 // let sub = word.substring(12, 17);//no negative allow
-// let slice = word.substr(0, 5);//length
+// let slice = word.substr(12, 5);//length
 
 // console.log(p1+" "+p2);
 // console.log(sub+" "+slice);
@@ -41,9 +41,9 @@
 
 // console.log(tr2+" "+tr3+" "+tr4);
 
-// let num = "5";
-// let pad1 = num.padStart(4,"0");
-// let pad2 = num.padEnd(4,"0");
+// let num = "Dharan";
+// let pad1 = num.padStart(8,"PK ");
+// // let pad2 = num.padEnd(4,"0");
 // console.log(pad1);
 // console.log(pad2);
 
@@ -58,20 +58,52 @@
 // console.log(r);
 
 
-let par="Welcome to javascript code";
-let n= par.replace("code","page");
-console.log(n)
+// let par="Welcome to javascript code";
+// let n= par.replace("code","page");
+// console.log(n)
 
 
-let par1="Welcome to javascript code";
-let n1= par1.replace(/CODE/i,"page");
-console.log(n1)
+// let par1="Welcome to javascript code";
+// let n1= par1.replace(/CODE/i,"page");
+// console.log(n1)
 
 
 
 
-let par2="Welcome to javascript code and html and css code";
-let n2= par2.replace(/code/g,"page");
-console.log(n2)
+// let par2="Welcome to javascript code and html and css code";
+// let n2= par2.replace(/code/g,"page");
+// console.log(n2)
 
 
+
+// let str = "virat VK";
+// console.log(str.endsWith("K")); // true
+
+// let str = "Java,Python";
+// console.log(str.includes("Python")); // true
+
+// let i = "Royal Challengers";
+// console.log(i.indexOf("o"));  // 1
+
+
+
+// let str = "Money Hiest";
+// console.log(str.length)
+
+
+// let str="Iron Man"
+// console.log(str.search(/Man/))
+
+// let str = "a,b,c";
+// console.log(str.split(","));
+
+// let str = "1020";
+// console.log(str.toString());
+
+// let str = "  Hello  ";
+// console.log(str.trim());
+// console.log(str.trim().length);
+
+
+// let str = new String("Pirates",10);
+// console.log(str.valueOf());
