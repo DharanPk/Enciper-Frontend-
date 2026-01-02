@@ -6,7 +6,7 @@
 
 //task2
 // var email=prompt("Enter a Mail ID")
-// if(email.includes("@pkdhr")&&email.includes(".")){
+// if(email.includes("@")&&email.includes(".")){
 //     alert("Vaild Mail")
 // }
 // else{
@@ -31,7 +31,7 @@
 
 //task4
 // var para=prompt("Write a Paragraph : ");
-// let s=para.trim().split(" ");
+// let s=para.split(" ");
 // let c=s.length;
 // alert("TOTAL  WORDS "+c );
 
@@ -95,3 +95,64 @@
 // } else {
 //   console.log("Condition not satisfied");
 // }
+
+//task11
+// var p=prompt("Enter the sentences")
+// var large="";
+// var ch=p.split(" ")
+// for(let i=0;i<ch.length;i++){
+//     if(ch[i].length>large.length){
+//         large+=ch[i]
+//     }
+// }
+// alert("Largest Word "+ large)
+
+
+//task12
+
+
+
+
+//task13
+// var mobile=(prompt("Enter the Number : "))
+// var mark="*".repeat(mobile.length-4) + mobile.slice(-4);
+// alert(mark)
+
+
+//task14
+var str=prompt("Enter a String")
+var rep="";
+for(let i=0;i<str.length;i++){
+    for(let j=i+1;j<str.length;j++){
+        if(str[i]==str[j]){
+            rep+=str[i]
+        }
+    }
+}
+alert(rep)
+
+//task15
+// var str=prompt("Enter a Words")
+// var v=0;
+// var c=0;
+// for(let i=0;i<str.length;i++){
+//     if("AEIOUaeiou".includes(str[i])){
+//         v++;
+//     }
+//     else{
+//         c++
+//     }
+// }
+// alert("vowels "+ v +" Consonants "+c)
+
+
+//task16
+let w1=prompt("Enter first string");
+let w2=prompt("Enter second string");
+let s1 = w1.toLowerCase().split("").sort().join("");
+let s2 = w2.toLowerCase().split("").sort().join("");
+if (s1.match(s2)) {
+  alert("Anagram");
+} else {
+  alert("Not an Anagram");
+}
