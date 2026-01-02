@@ -120,16 +120,16 @@
 
 
 //task14
-var str=prompt("Enter a String")
-var rep="";
-for(let i=0;i<str.length;i++){
-    for(let j=i+1;j<str.length;j++){
-        if(str[i]==str[j]){
-            rep+=str[i]
-        }
-    }
-}
-alert(rep)
+// var str=prompt("Enter a String")
+// var rep="";
+// for(let i=0;i<str.length;i++){
+//     for(let j=i+1;j<str.length;j++){
+//         if(str[i]==str[j]){
+//             rep+=str[i]
+//         }
+//     }
+// }
+// alert(rep)
 
 //task15
 // var str=prompt("Enter a Words")
@@ -145,14 +145,68 @@ alert(rep)
 // }
 // alert("vowels "+ v +" Consonants "+c)
 
+// //task16
+// let sentence = prompt("Enter your sentence here: ")
+// let res = ""
+// let word = sentence.split(" ")
+// for (i=0; i<word.length; i++){
+//     if(!res.includes(word[i])){
+//         res+=word[i] + " "
+// }
+// }
+// alert("Updated sentence: "+ res.trim())
 
-//task16
-let w1=prompt("Enter first string");
-let w2=prompt("Enter second string");
-let s1 = w1.toLowerCase().split("").sort().join("");
-let s2 = w2.toLowerCase().split("").sort().join("");
-if (s1.match(s2)) {
-  alert("Anagram");
-} else {
-  alert("Not an Anagram");
-}
+
+
+//task17
+// let w1=prompt("Enter first string");
+// let w2=prompt("Enter second string");
+// let s1 = w1.toLowerCase().split("").sort().join("");
+// let s2 = w2.toLowerCase().split("").sort().join("");
+// if (s1.match(s2)) {
+//   alert("Anagram");
+// } else {
+//   alert("Not an Anagram");
+// }
+
+// //task18
+// var a=prompt("Enter a String A")
+// var b=prompt("Enter a String B")
+// if(a.trim()==b.trim()){
+//   alert("EQUAL")
+// }
+// else{
+//   alert("NOT EQUAL")
+// }
+
+
+//task19
+// var str=prompt("Enter a string");
+// let n='1234567890';
+// let store='';
+// for(let i=0;i<str.length;i++){
+//     if(n.includes(str[i])){
+//               store+=str[i];
+//     }
+// }
+// alert(store)
+
+
+// //task20
+// var pass=prompt("Enter a Password");
+// var word=false;
+// var num=false;
+// for(let i=0;i<pass.length;i++){
+//     if(pass[i]>="A" && pass[i]<="Z"){
+//         word=true;
+//     }
+//     if(pass[i]>="0" && pass[i]<="9"){
+//         num=true;
+//     }    
+// }
+// if(pass.length>=9 && word && num){
+//     alert("PASS Strong")
+// }
+// else{
+//     alert("Weak PASS")
+// }
