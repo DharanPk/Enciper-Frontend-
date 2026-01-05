@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+         <button id="s">Show</button>
+         <button id="h">hidden</button>
+         <p id="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi rem, itaque, adipisci perferendis deleniti minus vero eligendi iusto et esse doloribus cum, vitae inventore soluta dolores nobis porro ea recusandae?</p>
+    <script>
+      const s=document.getElementById("s")
+      const h=document.getElementById("h")
+      const p=document.getElementById("p")
+
+      s.addEventListener("click" , ()=>{
+        p.style.display="block";
+        
+      })
+      h.addEventListener("click" , ()=>{
+        p.style.display="none";
+        
+      })
+    </script>
+</body>
+</html>

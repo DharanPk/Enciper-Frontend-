@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="div" style="width:300px;height:200px;border:1px solid black;">
+  Move mouse Inside BOX
+</div>
+
+<script>
+  const b =document.getElementById("div");
+  b.addEventListener("mousemove", function (e) {
+    let x = e.offsetX;
+    let y=e.offsetY;
+    b.style.backgroundColor = `rgb(${x},${y}, 200)`;
+  });
+</script>
+
+</body>
+</html>

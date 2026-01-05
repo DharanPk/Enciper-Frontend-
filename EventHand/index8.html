@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="but">CLICK ME</button>
+<p id="t" style="display:none;">This is was a Hidden Message </p>
+
+<script>
+  const b =document.getElementById("but");
+  const t =document.getElementById("t");
+  b.addEventListener("mouseover", function () {
+    t.style.display = "block";
+  });
+  b.addEventListener("mouseout", function () {
+    t.style.display = "none";
+  });
+</script>
+
+</body>
+</html>
