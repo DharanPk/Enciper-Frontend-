@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Tasks</title>
+
+    <style>
+      .box1 {
+        background: #ff6b6b;
+        padding: 12px;
+        margin: 8px;
+        border-radius: 8px;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      .box2 {
+        background: #4ecdc4;
+        padding: 12px;
+        margin: 8px;
+        border-radius: 8px;
+        color: #003333;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      .box3 {
+        background: #1a73e8;
+        padding: 12px;
+        margin: 8px;
+        border-radius: 8px;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      .box4 {
+        background: #f8c291;
+        padding: 12px;
+        margin: 8px;
+        border-radius: 8px;
+        color: #663300;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      .box5 {
+        background: #9b59b6;
+        padding: 12px;
+        margin: 8px;
+        border-radius: 8px;
+        color: #f3e5f5;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      input[type="text"] {
+        border: 2px solid #ff6b6b;
+        padding: 6px;
+        border-radius: 5px;
+        background-color: #ffecec;
+      }
+
+      input[type="email"] {
+        border: 2px solid #1a73e8;
+        padding: 6px;
+        border-radius: 5px;
+        background-color: #e8f1ff;
+      }
+
+      input[type="password"] {
+        border: 2px solid #4ecdc4;
+        padding: 6px;
+        border-radius: 5px;
+        background-color: #e8fffb;
+      }
+
+      input[placeholder] {
+        font-style: italic;
+      }
+
+      #title {
+        color: #2c3e50;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 3px solid #1a73e8;
+      }
+
+      #highlight {
+        background-color: #ffeaa7;
+        padding: 8px;
+        border-left: 5px solid #fdcb6e;
+        font-size: 22px;
+      }
+
+      #footer {
+        color: #636e72;
+        font-size: 16px;
+        padding: 5px;
+        margin-top: 10px;
+        display: inline-block;
+        border-top: 2px solid gray;
+      }
+
+      h2,
+      p,
+      span {
+        font-family: "Segoe UI", sans-serif;
+        color: #2d3436;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">CSS Tasks Output</h1>
+
+    <h2>1. Five Classes Styled Differently</h2>
+    <div class="box1">Class 1 - Coral Red Box</div>
+    <div class="box2">Class 2 - Aqua Green Box</div>
+    <div class="box3">Class 3 - Royal Blue Box</div>
+    <div class="box4">Class 4 - Soft Orange Box</div>
+    <div class="box5">Class 5 - Purple Box</div>
+
+    <h2>2. Form With Attribute Selectors</h2>
+    <form>
+      <input type="text" placeholder="Enter Name" /><br /><br />
+      <input type="email" placeholder="Enter Email" /><br /><br />
+      <input type="password" placeholder="Enter Password" /><br /><br />
+    </form>
+
+    <h2 id="highlight">3. Elements Styled Using IDs</h2>
+    <p>This paragraph is styled using the group selector.</p>
+    <span id="footer">Styled using ID "footer"</span>
+
+    <h2>4. Group Selector Applied</h2>
+    <p>All H2, P, and SPAN tags share the same font family and color.</p>
+  </body>
+</html>

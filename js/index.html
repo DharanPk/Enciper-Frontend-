@@ -7,13 +7,48 @@
    
 </head>
 <body>
-    <h1 id="h1"></h1>
-    <h2 id="h2"></h2>
+    <!-- <div id="h1" class="f">first</div>
+    <div id="h1" class="f">second</div> -->
+    <div >
+       <input type="button" id="but" value="button" onclick="fun()">
+       <h1 id="h">hello</h1>
+    </div>
 
 
 
-     <!-- <script src="String.js"></script> -->
-     <script src="program.js"></script>
+
+
+    
+     <!-- <script src="test.js"></script>  -->
+     <script>
+
+        const s=document.getElementById("but");
+        const q=document.getElementById("h");
+
+        s.addEventListener("mousedown", () => {
+            q.innerHTML="hello world";
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        // const d=document.getElementsByTagName("div")
+        // d[0].innerText="FC Ashwa";
+        // d[1].innerHTML="MM24";
+        // d[0].style.color="black";
+        // d[1].style.color="grey";
+        // d[1].style.padding="20px";
+     </script>
     
 </body>
 </html>
