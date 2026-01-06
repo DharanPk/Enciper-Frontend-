@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <label>USERNAME</label><br>
+        <input type="text" placeholder="Enter Your Name">
+        <button>Submit</button>
+        </form>
+    <script>
+      const f=document.getElementById("form");
+      f.addEventListener("submit",(e)=>{
+            e.preventDefault()
+            alert("Page Without reloading! form Submitted")
+            
+      })
+    </script>
+</body>
+</html>

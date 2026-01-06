@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">IF KEY UP COLOR CHANGE</h1>
+    <h1 id="h"></h1>
+
+    <script>
+        const h1=document.getElementById("h1")
+        const h=document.getElementById("h")
+        document.addEventListener("keyup",(e)=>{
+            h.innerHTML="key UP "+e.key;
+            h.style.backgroundColor="yellow"
+            h1.innerHTML="IF KEY UP COLOR CHANGED"
+            h1.style.color="red";
+
+        })
+    </script>
+</body>
+</html>

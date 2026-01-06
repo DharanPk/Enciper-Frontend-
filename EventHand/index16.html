@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="f">
+        <input type="text" id="in" placeholder="Enter Your Name" >
+        <button>submit</button>
+        </form>
+    <script>
+           
+           const f=document.getElementById("f")
+           f.addEventListener("submit",(e)=>{
+            const i=document.getElementById("in").value;
+            if(i===""){
+                alert("Field is Empty")
+                e.preventDefault();
+            } })
+    </script>
+</body>
+</html>
