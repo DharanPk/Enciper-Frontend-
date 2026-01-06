@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="p">
+        TOP
+        <button id="c">
+            Bottom
+        </button>
+        <div>
+        <script>
+            const p=document.getElementById("p")
+            const c=document.getElementById("c")
+            p.addEventListener("click",()=>{
+                alert("TOP Clicked")
+            })
+            c.addEventListener("click",(e)=>{
+                e.stopPropagation();
+                alert("Button Clicked 'STOP Parent Responses'")
+            })
+        </script>
+</body>
+</html>

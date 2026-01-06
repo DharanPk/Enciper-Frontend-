@@ -6,11 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <button>button 1</button>
-    <button>button2</button>
-    <button>button 3</button>
-    <script>
-        
-    </script>
+    <button onclick="bt(this)">Button 1</button>
+    <button onclick="bt(this)">Button 2</button>
+    <button onclick="bt(this)">Button 3</button>
+<script>
+    function bt(but) {
+    alert(but.innerText + " clicked");
+    }
+</script>
 </body>
 </html>

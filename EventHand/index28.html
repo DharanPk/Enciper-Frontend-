@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+      <div id="p" style="padding:20px; background:lightblue;">inner
+        <button id="c">
+            Outer
+        </button>
+        <div>
+        <script>
+            const p=document.getElementById("p")
+            const c=document.getElementById("c")
+            p.addEventListener("click",()=>{
+                alert("INNER Clicked")
+            })
+            c.addEventListener("click",(e)=>{
+                e.stopPropagation();
+                alert("OUTER Clicked ")
+            })
+        </script>
+</body>
+</html>
