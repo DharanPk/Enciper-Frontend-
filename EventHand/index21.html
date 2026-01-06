@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="in">
+    <p id="p"></p>
+    <script>
+        const i=document.getElementById("in")
+        const p=document.getElementById("p")
+        i.addEventListener("input",()=>{
+           p.innerText ="Real Time Typed : "+i.value;
+        })
+    </script>
+</body>
+</html>

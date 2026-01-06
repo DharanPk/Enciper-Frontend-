@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">TOP TEAMS
+        <!-- <input type="text" name="" id="i"> -->
+    <ol>
+        <li>Chennai Super Kings (CSK)</li>
+        <li>Mumbai Indians (MI)</li>
+        <li>Royal Challengers Bangalore (RCB)</li>
+        </ol>
+        <span>CLICK ME</span>
+        </div>
+<p id="p"></p>
+
+        <script>
+            document.getElementById("div").addEventListener("click",(e)=>{
+             document.getElementById("p").innerHTML=e.type +" "+e.target.tagName;
+            })
+        </script>
+</body>
+</html>
