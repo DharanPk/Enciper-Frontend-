@@ -8,7 +8,7 @@
 <body>
     <form id="form">
         <label>USERNAME</label><br>
-        <input type="text" placeholder="Enter Your Name">
+        <input type="text" placeholder="Enter Your Name" id="i">
         <button>Submit</button>
         </form>
     <script>
@@ -18,6 +18,12 @@
             alert("Page Without reloading! form Submitted")
             
       })
+
+
+      i.addEventListener("input",(e)=>{
+        console.log("Input : "+e.target.value);
+      })
+
     </script>
 </body>
 </html>
