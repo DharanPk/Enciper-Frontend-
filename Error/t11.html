@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h">HELLO HIDDEN</h1>
+    <script>
+        const h=document.getElementById("h")
+        const pro=()=>{return new Promise((res)=>{
+            setTimeout(()=>{
+               h.style.display="none";
+               res()
+            },3000);
+        })
+    }
+    pro()
+    </script>
+</body>
+</html>

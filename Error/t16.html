@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Check heigth & width</h2>
+    <button id="bt">Button</button>
+    <p id="p"></p>
+    <script>
+           const bt=document.getElementById("bt")
+           const p=document.getElementById("p")
+           bt.addEventListener("click",()=>{
+            const h=window.screen.height;
+            const w=window.screen.width;
+            p.innerHTML="height = "+h +" "+"width = "+w
+           })
+    </script>
+</body>
+</html>

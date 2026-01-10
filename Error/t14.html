@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>GET USER NAME FROM API</h2>
+    <button id="bt">GET Name's</button>
+    <ul id="h"></ul>
+    <script>
+        const bt=document.getElementById("bt");
+        const h=document.getElementById("h");
+        bt.addEventListener("click",async()=>{
+            const r=await fetch("https://mimic-server-api.vercel.app/users")
+            const data=await r.json();
+            h.innerHTML="";
+            data.forEach(el => {
+                const li=document.createElement("li")
+                li.innerHTML=el.name;
+                h.appendChild(li);
+            });
+        })
+    </script>
+</body>
+</html>
