@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p">Message</p>
+     <script>
+        const p=document.getElementById("p")
+        const pro=()=>{ return new Promise((res) => {
+              setTimeout(() => {
+                res("Welcome User");
+              }, 2000);
+        })
+    }
+        window.addEventListener("load",()=>{
+            pro().then(use=>{
+                p.innerHTML=use
+            })
+        })
+     </script>   
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const p=prompt("Enter the API URL ")
+    const fun=(p)=>{
+        const x=new XMLHttpRequest()
+        x.open("GET",p)
+        x.onload=()=>{
+            if (x.status===200){
+            alert("Data loaded successfully")
+            }else{
+            alert("Error loading data " +x.status)
+            }}
+       
+     x.onerror=()=>{
+        console.error("Requset Failed")
+     }
+      x.send()
+}
+fun(p)
+</script>
+</body>
+</html>

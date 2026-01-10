@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1 id="h1"></h1>
+  <input type="text" name="" id="in">
+  <button id="bt">submit</button>
+
+
+    <script>
+       const i=document.getElementById("in");
+       const b=document.getElementById("bt");
+       b.addEventListener("click",()=>{
+        try{
+        if(i.value ===""){
+            throw new Error('Input cannot be empty')
+        }
+        h1.innerHTML="Allowed"
+    }
+    catch(err){
+         h1.innerHTML=err
+    }
+})
+
+       
+       
+    // const age=(a)=>{
+    //     if(89<18){
+    //         throw new Error("Error in age")
+    //     }
+    //     return "Allow"
+    // }
+    // try{
+    //     console.log(age(10));
+    // }
+    // catch(error){
+    //     console.log(error);
+    // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="bt">Check Data</button>
+    <h3 id="h"></h3>
+
+    <script>
+        const bt=document.getElementById("bt")
+        const h=document.getElementById("h")
+        const c=bt.addEventListener("click", () => {
+        h.innerHTML="Loading..."
+        fun()
+        })
+    const fun=()=>{
+        const x=new XMLHttpRequest()
+        x.open("GET", "https://mimic-server-api.vercel.app/users")
+        x.onload=()=>{
+            if (x.status===200){
+            h.innerText="Data loaded successfully"
+            }else{
+            h.innerText="Error loading data"
+            }}
+        x.send()
+}
+
+    </script>
+    
+</body>
+</html>

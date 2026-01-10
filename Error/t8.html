@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+   <input type="text" name="" id="in">
+   <button id="bt">submit</button>
+   <h1 id="h1"></h1>
+
+    <script>
+       const i=document.getElementById("in");
+       const b=document.getElementById("bt");
+       b.addEventListener("click",()=>{
+        try{
+        if(i.value.length <6){
+            throw new Error("Username must be at least 5 characters")
+        }
+        document.getElementById("h1").innerHTML="Character Accepted"
+    }
+    catch(err){
+         h1.innerHTML=err
+    }
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const h=confirm("Can you see the API Call ?")
+        // if(h){
+        //   fun(h)
+        // }
+        // else{
+        //   alert("Request cancelled by user")
+        // }
+    const fun=()=>{
+        const x=new XMLHttpRequest()
+        x.open("GET", "https://mimic-server-api.vercel.app/users")
+        x.onload=()=>{
+            if (x.status===200){
+            alert("Data loaded successfully")
+            }else{
+            alert("Error loading data")
+            }}
+        x.send()
+}
+      const h=confirm("Can you see the API Call ?")
+        if(h){
+          fun(h)
+        }
+        else{
+          alert("Request cancelled by user")
+        }
+</script>
+</body>
+</html>
