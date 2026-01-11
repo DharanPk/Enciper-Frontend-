@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="i">
+    <button id="bt">Submit</button>
+    <p id="p"></p>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+        const i=document.getElementById("i");
+        const bt=document.getElementById("bt");
+        bt.addEventListener("click",async()=>{
+            // const data=await r.json()
+            try{
+                document.getElementById("p").innerHTML="FETCHING DATA...."
+                const url=i.value
+                const r=await fetch(url)
+                 document.getElementById("p").innerHTML="FETCHING DATAED"
+                if(r.status===200){
+                 throw new Error("UNSUCESSFULL TRANSFERED")
+                } document.getElementById("p1").innerHTML="SUCESSFULL OF TRANSFERED";
+            }
+            catch(err){
+                document.getElementById('p').innerHTML=err;
+            }
+            finally{
+               document.getElementById("p1").innerHTML="\nProcess completed";
+            }
+        })
+    </script>
+</body>
+</html>

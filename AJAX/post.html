@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User CRUD</title>
+</head>
+<body>
+
+<h2>Add User</h2>
+<input type="text" id="name" placeholder="Name">
+<input type="text" id="username" placeholder="Username">
+<button onclick="addUser()">Add User</button>
+
+<hr>
+
+<table border="1" id="tab">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>USERNAME</th>
+            <th>ACTION</th>
+        </tr>
+    </thead>
+    <tbody id="tt"></tbody>
+</table>
+
+<script>
+    function loadUsers() {
+        const s = new XMLHttpRequest();
+        s.open("GET", "https://mimic-server-api.vercel.app/users", true);
+
+        s.onload = function () {
+            if (s.status === 200) {
+                const data = JSON.parse(s.responseText);
+                const tab = document.getElementById("tt");
+
+                let a = "";
+                data.forEach(element => {
+                    a += `
+                    <tr>
+                        <td>${element.id}</td>
+                        <td>${element.name}</td>
+                        <td>${element.username}</td>
+                        <td>
+                            <button onclick="del('${element.id}','${element.name}','${element.username}')">Delete</button>
+                            <button onclick="edi('${element.id}','${element.name}','${element.username}')">Edit</button>
+                        </td>
+                    </tr>`;
+                });
+
+                tab.innerHTML = a;
+            } else {
+                alert("Loading Failed");
+            }
+        };
+
+        s.send();
+    }
+
+    loadUsers(); 
+    function addUser() {
+        const name = document.getElementById("name").value;
+        const username = document.getElementById("username").value;
+
+        if (!name || !username) {
+            alert("Please fill all fields");
+            return;
+        }
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://mimic-server-api.vercel.app/users", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onload = function () {
+            if (xhr.status === 201 || xhr.status === 200) {
+                alert("User added successfully");
+                document.getElementById("name").value = "";
+                document.getElementById("username").value = "";
+                loadUsers(); 
+            } else {
+                alert("Failed to add user");
+            }
+        };
+
+        const data = {
+            name: name,
+            username: username
+        };
+
+        xhr.send(JSON.stringify(data));
+    }
+    function del(id, name, username) {
+        alert("Are you sure you want to delete?\n\nID: " + id + "\nName: " + name + "\nUsername: " + username);
+        console.log("Deleted data:", id, name, username);
+    }
+    function edi(id, name, username) {
+        alert("Are you sure you want to edit?\n\nID: " + id + "\nName: " + name + "\nUsername: " + username);
+        console.log("Edited data:", id, name, username);
+    }
+</script>
+
+</body>
+</html>

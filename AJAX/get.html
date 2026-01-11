@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1 id="h"></h1> -->
+    
+
+    <table border="1" id="t">
+        <thead>
+        <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>USERNAME</th>
+        <th>action</th>
+        </tr>
+        </thead>
+        <tbody id="tt">
+
+        </tbody>
+    
+        </table>
+
+    <script>
+    //     const s=prompt("Enter a id : ")
+    //     const h=document.getElementById("h")
+    //     function fun(s){
+    //     const x=new XMLHttpRequest();
+    //     x.open("GET","https://mimic-server-api.vercel.app/users/"+s)
+    //     x.onload=()=>{
+    //     const data=JSON.parse(x.responseText);
+    //     h.innerHTML=data.name
+    //     }
+    //     x.send()
+    // }
+    // fun(s)
+        
+        const x=new XMLHttpRequest();
+        x.open("GET","https://mimic-server-api.vercel.app/users")
+        x.onload=()=>{ 
+        const data=JSON.parse(x.responseText);
+        console.log(data)
+        const t=document.getElementById("tt")
+        let s=""
+            data.forEach(el => {
+                 s+=
+                `<tr>
+                    <td> ${el.id}</td>
+                    <td> ${el.name}</td>
+                    <td> ${el.username}</td>
+                   <td> <button id="bt" onclick="del('${el.id}','${el.name}','${el.username}')"> Delete </button>
+                    <button onclick="edit('${el.id}','${el.name}')">Edit</button></td>
+                 </tr>`  
+            });
+            t.innerHTML=s
+        }
+        x.send();   
+
+        function del(i,n,u){
+            const s={
+                id:i,
+                name:n,
+                username:u 
+            }
+            console.log(s)
+            alert(JSON.stringify(s))
+          
+        }
+        function edit(i,n){
+            confirm("ARE YOU WANT TO EDIT ?")
+        }
+    
+    </script>
+</body>
+</html>

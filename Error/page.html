@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+
+<style>
+    body {
+        background-color: #c6e75c;
+        justify-items: center;
+        margin-top: 200px;
+        background:url(https://tse1.explicit.bing.net/th/id/OIP.yy--b0HIVf4p1rcm24izDQHaFj?cb=defcachec2&rs=1&pid=ImgDetMain&o=7&rm=3) ;
+        background-image: cover;
+        }
+    .div1 {
+    width: 300px;
+    padding: 60px;
+    background-image: url("https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+        h2{
+          text-align: center;
+        }
+        input {
+          width: 100%;
+          padding: 15px;
+          margin: 5px 0;
+          box-sizing: border-box;
+    }
+      button{
+            width:100%;
+            padding:10px;
+            background-color: #e50707;
+            color: white;
+            border: 0px;
+            cursor:pointer;
+        }
+    button:hover{
+            background-color: #04a4c4;
+    }
+    </style>
+</head>
+<body class="">
+    <div class="div1">
+    <h2>Login Page</h2>
+    <form>
+       <input id="in" type="text" placeholder="Username" required>
+       <input id="pass" type="password" placeholder="Password" required>
+       <button id="bt">Login</button>
+        </form>
+    </div>
+<h1 id="h"></h1>
+
+    <script>
+       
+        const b=document.getElementById("bt");
+        const s=document.getElementById("h")
+        
+
+
+        b.addEventListener("click",(e)=>{
+         e.preventDefault();   
+        const i=document.getElementById("in");
+        const p=document.getElementById("pass");
+            let c=true;
+          let  inew=/^[A-Z][a-z]*[0-9][a-z]*$/;
+          let  pnew=/^[0-9]{5,}$/
+            if(!inew.test(i.value)){
+                c=false;
+                console.log(c)
+                alert("Incorrect username")
+            }
+            if(!pnew.test(p.value)){
+                c=false;
+                console.log(c)
+                alert("Password worng")
+            }
+            if(c===true)
+           s.innerHTML= localStorage.setItem("login","true");
+            window.location.href="t1.html";
+        })
+
+        window.addEventListener("load",()=>{
+            if( localStorage.getItem("login")==="true"){
+                window.location.href="t1.html";
+            }
+        })
+        
+
+    </script>
+</body>
+</html>
