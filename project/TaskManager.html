@@ -52,7 +52,7 @@
             text-decoration:line-through;
             color:darkgray;
          }
-         .but1{
+         .b1{
             background-color:rgb(15, 154, 241);
             color: aliceblue;
             border:0px;
@@ -108,28 +108,55 @@
         <div class="sub-a">
         
         <input type="text" placeholder="What needs to be done?" id="in">
-        <button class="but1">Add Task</button>
+        <button class="b1" id="b1" onclick="fun()">Add Task</button>
     </div>
-<div class="task">
-    <div class="a">
-        <i class="fa-solid fa-check"></i>
-        <p class="p1">Task A</p>
-         <button class="but">Remove </button>  
-         </div>
-         <hr>
-         <div class="b">
-        <i class="fa-solid fa-check"></i>
-        <p class="pc"><b>Task B</b></p>
-         <button class="but">Remove </button>  
-         </div>
-         <hr>
-         <div class="c">
-       <u><i class="fa-solid fa-check"></i></u>
-        <p class="p1">Task C</p>
-         <button class="but">Remove</button>  
-         </div>
-         <hr>
-         </div>
+
+     <div class="task">
+    <table border="0" width="100%" cellpadding="10">
+    <tbody id="b">
+      <tr class="r">
+        <td><i class="fa-solid fa-check"></i></td>
+        <td class="p1">HP 1</td>
+        <td><button class="but">Remove</button></td>
+     
+    </tbody>
+  </table>
+</div>
     </div>
+
+
+    <script>
+      const bt=document.getElementById("b1");
+      const i=document.getElementById("in");
+      const t=document.getElementById("b");
+      function fun(){
+         const data=i.value;
+         if(data===""){
+            alert("Please Enter the task Name : ")
+            return;
+         }
+         const r=document.createElement("tr");
+         r.innerHTML=`
+                    <td><i class="fa-solid fa-check"></i></td>
+                    <td> ${data}</td>
+                   <td> <button class="but">Remove</button>
+                  `;
+                  t.appendChild(r);
+                  i.value="";
+                   
+        const but = r.querySelector(".but");
+            but.addEventListener("click", function () {
+            const d = this.parentElement.previousElementSibling;
+            const yes=confirm("ARE YOU WANT TO REMOVE ? ")
+            if(yes){
+            d.style.textDecoration = "line-through";
+            d.style.color = "darkgray";
+            }
+            
+         });
+      }
+      
+
+      </script>
 </body>
 </html>
