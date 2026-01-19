@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(270deg, #1db954, #11998e, #56ab2f, #93f9b9);
+    background-size: 800% 800%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+    #my{
+    width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }    
+h2{ 
+    text-align: center;
+    color: #333;
+}
+label{
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+    input,select,textarea {
+        width: 90%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 12px;
+        border: 2px solid #aaa;
+        border-radius: 15px;
+    }
+    textarea {
+        height: 70px;
+        resize: none;
+    }
+    .gen input{
+        width: auto;
+        margin-right: 5px;
+    }
+    .gen{
+        margin-bottom: 12px;
+    }
+    button{
+        width: 100%;
+        padding: 10px;
+        background: #0ec917;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+button:hover{
+    background:  #0be4b2;
+}
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color:rgb(24, 196, 27);
+}
+table{
+    width:90%;
+    margin:20px auto;
+    border-collapse:collapse;
+    background:white; 
+   }
+   th{
+    padding: 20px;
+   }
+    td{
+         text-align: center;
+    }
+    #bt{
+        width: 30%;
+        padding: 10px;
+        background: #971d1d;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    #bt:hover{
+         background: #db6d54;
+    }
+    </style>
+</head>
+
+<body>
+    <form id="my">
+    <h2>Registration Form</h2>
+
+    <label>Name:</label>
+    <input type="text" placeholder="Enter Name" id="u" required>
+    <label>Password:</label>
+    <input type="password" placeholder="Enter Password" id="p" required>
+    <label>Email:</label>
+    <input type="email" placeholder="Enter the Email" id="e" required>
+    <label>Date of Birth:</label>
+    <input type="date" id="d" required>
+
+    <label>Gender:</label>
+    <div class="gen" id="g">
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+    </div>
+
+    <label>EXTRA CURRICULAR:</label>
+    <div class="gen" id="dom">
+        <input type="checkbox"> SPORTS
+        <input type="checkbox"> ART
+        <input type="checkbox"> MUSIC
+        <input type="checkbox">OTHER
+    </div>
+
+    <label>State:</label>
+    <select id="st" required>
+        <option>Tamil Nadu</option>
+        <option>Kerala</option>
+        <option>Karnataka</option>
+    </select>
+
+    <label>Feedback:</label>
+    <textarea placeholder="Give a feedback here..." id="add"></textarea>
+
+    <button type="submit">Submit</button>
+</form>
+
+    <table border="2" id="t">
+        <thead>
+        <tr>
+        <th>NAME</th>
+        <th>EMAIL ID</th>
+        <th>DOB</th>
+        <th>GENDER</th>
+        <th>Action</th>
+        </tr>
+        </thead>
+        <tbody id="tt">
+        </tbody>
+        </table>
+</body>
+<script>
+let editIndex = null;
+
+const n = document.getElementById("u");
+const p = document.getElementById("p");
+const em = document.getElementById("e");
+const d = document.getElementById("d");
+const form = document.getElementById("my");
+const t = document.getElementById("tt");
+let gen = document.querySelector('input[name="gender"]:checked');
+window.onload = displayData;
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let genr= document.querySelector('input[name="gender"]:checked');
+    let gen=genr.value;
+    let inew = /^[A-Z][a-z]*[0-9][a-z]*$/;
+    let pnew = /^[0-9]{5,}$/;
+    let enew = /^[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
+
+    if (!inew.test(n.value)) {
+        alert("Username must start with capital letter and contain a number");
+        return;
+    }
+    if (!pnew.test(p.value)) {
+        alert("Password must contain at least 5 digits");
+        return;
+    }
+    if (!enew.test(em.value)) {
+        alert("Invalid email format");
+        return;
+    }
+    else{
+        
+    }
+
+    let data = JSON.parse(localStorage.getItem("users")) || [];
+
+    let user = {
+        na: n.value,
+        p: p.value,
+        d: d.value,
+        e: em.value,
+        state: document.getElementById("st").value,
+        feedback: document.getElementById("add").value,
+        g:gen
+    };
+    if (editIndex !== null) {
+        data[editIndex] = user;
+        editIndex = null;
+    } else {
+        data.push(user);
+    }
+
+    localStorage.setItem("users", JSON.stringify(data));
+    form.reset();
+    displayData();
+});
+function displayData() {
+    let data = JSON.parse(localStorage.getItem("users")) || [];
+    t.innerHTML = "";
+
+    data.forEach((u, i) => {
+        t.innerHTML += `
+        <tr>
+            <td>${u.na}</td>
+            <td>${u.e}</td>
+            <td>${u.d}</td>
+            <td>${u.g}</td>
+            <td>
+                <button onclick="editData(${i})" id="bt">Edit</button>
+                <button onclick="deleteData(${i})" id="bt">Delete</button>
+            </td>
+        </tr>`;
+    });
+}
+function editData(i) {
+    let data = JSON.parse(localStorage.getItem("users"));
+    let u = data[i];
+    n.value = u.na;
+    p.value = u.p;
+    d.value = u.d;
+    em.value = u.e;
+      document.querySelectorAll('input[name="gender"]').forEach(r => {
+        r.checked = r.value === u.g;
+    });
+    editIndex = i;
+}
+function deleteData(i) {
+    let data = JSON.parse(localStorage.getItem("users"));
+    data.splice(i,1);
+    localStorage.setItem("users", JSON.stringify(data));
+    displayData();
+}
+</script>
+
+</body>
+</html>

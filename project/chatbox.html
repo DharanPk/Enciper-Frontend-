@@ -13,18 +13,18 @@
                 text-align: center;
                 border-radius: 10px 10px 0px 0px;
             }
-            .c1{
+            /* .c1{
                 margin-left: 37%;
                 margin-bottom: 10px;
                 justify-content: right;
                 padding: 10px 10px 10px 10px; 
                 font-size:  20px;
-                /* margin-top: 200px; */
-                /* margin-top: 50px; */
+                margin-top: 200px;
+                margin-top: 50px;
                 border-radius: 30PX 30PX 0px 30px;
                 color: white;
                 background-color: rgb(0, 136, 255);
-            }
+            } */
             .c2{
                text-align: left;
                font-size:  20px;
@@ -41,7 +41,7 @@
                 color: white;
                 background-color: rgb(0, 136, 255);
             }
-            .c4{
+            /* .c4{
                 margin-left: 65%;
                 justify-content: right;
                 padding: 10px 10px 10px 10px; 
@@ -69,7 +69,7 @@
                 background-color:lightgray;
                 border-radius: 0px 0px 10px 10px;
                 
-            }
+            } */
             .main{
                 margin: 200px 600px 500px 500px;
                 background-color: white;
@@ -84,49 +84,89 @@
                 padding: 5px;
                 border: 0px;
                 border-radius: 15px;
-
             }
             .sub-2{
                 justify-content: space-evenly;
                 
             }
-                
-            
             button{
                 background-color: rgb(0, 136, 255);
                 border-radius: 10px;
                 width: 50px;
                 height: 30px;
                 margin-left:0px;
-
             }
             body{
                 background-color: rgb(0, 136, 255);
                 font-family: sans-serif;
             }
-  </style>
-     
-    
+            .chat-area {
+            height: 400px;
+            /* overflow-y: auto; */
+            padding: 15px;
+            background-color: white;
+            }
+            .sub-2 {
+            display: flex;
+            padding: 10px;
+            background-color: lightgray;
+            border-radius: 0 0 10px 10px;
+            align-items: center;
+            }
+            .inputbox {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 20px;
+            border: none;
+            }
+            .add {
+            margin-left: 10px;
+            border-radius: 15px;
+            }
+            
+</style>
+
 </head>
 <body>
-    <div  class="main">
-  <div class="sub-1">
-    <h1>CHAT APP</h1>
-  </div><br><br>
-   <span class="c1">You are my Bae💖<b>:Abby</b></span><br><br><br>
-  <span class="c2"><b>JK</b>: oooo🙈</span><br><br><br>
-   <span class="c3">😊😊<b>:Abby</b></span><br><br><br>
-    <span class="c2"><b>JK:</b>you are my Bee</span><br><br><br>
-   <span class="c4">😂😂<b>:Abby</b></span><br><br><br>
-   <span class="c2"><b>JK:</b>You got it right?</span><br><br><br>
-   <span class="c5">yeah😊<b>:Abby</b></span><br><br><br>
-    <span class="c2"><b>JK:</b>😘😍</span><br><br><br>
-   
-    <div class="sub-2">
-      <div class="c6"><input type="text"  placeholder="Type a message..." class="inputbox">
-            <button class="add">Send</button>
-            </div>
-      </div>
-        </div>
+    <div class="main">
+   <div class="sub-1">
+  <h1>CHAT APP</h1>
+</div>
+<div class="chat-area" id="chat"></div>
+<div class="sub-2">
+  <input type="text" placeholder="Type a message..." class="inputbox" id="msg">
+  <button class="add" onclick="sendMsg()">Send</button>
+</div>
+</div>
+
+
 </body>
+
+
+<script>
+function sendMsg() {
+    const input = document.getElementById("msg");
+    const chat = document.getElementById("chat");
+    const text = input.value.trim();
+
+    if (text === "") return;
+
+    // User message
+    chat.innerHTML += `<div class="right">${text} <b>:Abby</b></div>`;
+    input.value = "";
+    chat.scrollTop = chat.scrollHeight;
+
+    // Fake typing...
+    setTimeout(() => {
+        fetch("https://api.adviceslip.com/advice")
+        .then(res => res.json())
+        .then(data => {
+            chat.innerHTML += `<div class="left"><b>JK:</b> ${data.slip.advice}</div>`;
+            chat.scrollTop = chat.scrollHeight;
+        });
+    }, 1000);
+}
+</script>
+
 </html>
